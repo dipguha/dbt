@@ -49,10 +49,79 @@
   - raw_listings
   - raw_reviews
 
-## Lecture 23: 
+## Lecture 23: Set up instructions
+- brew install python@3.11 virtualenv
+- mkdir ~/.dbt
 
-## Lecture 17: 
+## Lecture 26: Setting up Python and PIP on Mac
+- Tools
+  - iTerm2
+  - Homebrew
+  - fig.io for autocompletion
+- Install Python 3.11 and Python virtualenv package
+- Create a virtual env
+- Activate virtual env
+  ```bash
+    mkdir course
+    cd course
+    brew install python@3.11 virtualenv
+    virtualenv venv --python=python3.11
+    . venv/bin/activate
+  ``` 
 
-## Lecture 17: 
+## Lecture 27: dbt installation
+```bash
+  pip install dbt-snowflake=1.5.0
+  dbt
+``` 
 
-## Lecture 17: 
+## Lecture 28: dbt1.5 project and connect to Snowflake
+```bash
+  mkdir ~/.dbt
+  dbt init dbtlearn
+  ls
+  cd dbtlearn
+  dbt debug
+``` 
+- Choose Snowflake as database and provide account number
+- user: dbt, password: , role: transform, warehouse: COMPUTE_WH, database: AIRBNB, schema: DEV, thread: 1
+- /.dbt/profiles.yml created
+
+## Lecture 30:
+- dbt_project.yml
+  - project level configuration
+  - model level config
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
+
+## Lecture 28:
