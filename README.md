@@ -48,6 +48,7 @@
   - raw_hosts
   - raw_listings
   - raw_reviews
+  - full_moon_date
 
 ## Lecture 23: Set up instructions
 - brew install python@3.11 virtualenv
@@ -92,15 +93,41 @@
   - project level configuration
   - model level config
 
-## Lecture 28:
+## Lecture 33: Install and configure DBT Power user extension
+- Extension: dbt power user v0.20.0 
+- code - settings - files - Associations - add items - (*.sql - jinga-sql)
+- Select appropriate Python interpreter
+- dbt slack channel, tools-dbt-power-user
 
-## Lecture 28:
+## Lecture 35: Datasets and Data flow overview
+- Models
+  - src_hosts
+  - src_listings
+  - src_reviews
 
-## Lecture 28:
+## Lecture 37: Models overview
+- Models are basic building blocks of business logic
+- Materialized as tables, views
+- Live in the sql files in models folder
+- Models can reference each other and use templates and macros
 
-## Lecture 28:
+## Lecture 38: CTE Common table expression
+- Break complex queries into simple queries
+```sql
+  with <name of the result set> (column names)
+  as (cte_query)
+  <reference the cte>
 
-## Lecture 28:
+  with raw_listings as (select * from raw.listings)
+  select id as listing_id, name as listing_name, url from raw_listings
+```
+
+## Lecture 39: Creating first model, Airbnb listings
+- write the CTE in Snowflake first
+- Create src folder within models folder
+- Create src_listings.sql with CTE expression
+- dbt run (from dbtlearn folder)
+- Create a view dev.src_listings as Dev is the target schema
 
 ## Lecture 28:
 
