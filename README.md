@@ -129,15 +129,29 @@
 - dbt run (from dbtlearn folder)
 - Create a view dev.src_listings as Dev is the target schema
 
-## Lecture 28:
+## Lecture 42: Materialization overview
+- Materialization (how models are stored and managed in the db) types
+  - View
+  - Table
+  - Incremental
+  - Ephemeral
 
-## Lecture 28:
+## Lecture 43: Model dependencies and ref tag
+- Create a new folder dim under models
+- Create file dim_listings_cleansed.sql
+- jinga is template engine for Python
 
-## Lecture 28:
+## Lecture 44: Table type and project level config
+- dbt_project.yml: defines default materialization
+- dim: materialized: table
 
-## Lecture 28:
+## Lecture 45: Incremental materialization
+- After made the changes use dbt run
+- dbt run --full-refresh
 
-## Lecture 28:
+## Lecture 46: Ephemeral materiaization
+- Change the dbt_project.yml and make src level as ephemeral
+- target folder has the raw sql which can be used for debugging purpose
 
 ## Lecture 28:
 
