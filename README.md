@@ -39,9 +39,17 @@
 - Choose user name and password to get srarted
 
 ## Lecture 22: Importing Airbnb data into Snowflake
-- 
+- Create role transform
+- Create warehouse compute_wh
+- Create user dbt and assign role transform
+- Create database and schema airbnb.raw
+- Grant All privileges on warehouse, database, schema(current and future in database airbnb), tables (current and future in raw schema)
+- Tables
+  - raw_hosts
+  - raw_listings
+  - raw_reviews
 
-## Lecture 17: 
+## Lecture 23: 
 
 ## Lecture 17: 
 
