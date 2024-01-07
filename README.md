@@ -177,6 +177,31 @@
 - Change the sources.yml file and add freshness condition
 - dbt source freshness
 
-## Lecture 28:
+## Lecture 52: Snapshots
+- How dbt handles type-2 slowly changing dimensions
+- Understand snapshot strategies
+- Create snapshots on top of listings and hpsts models
 
-## Lecture 28:
+## Lecture 53: Snapshot overview
+- Someone changes email id
+- dbt_valid_from and dbt_valid_to columns are used
+- Current version is with dbt_valid_to is null
+- Strategies
+  - Timestamp: A unique key and an updated_at field is defined on the source model. These columns are used for determining changes
+  - Check: Any change in a set of columns (or all columns) will be picked up as an update
+
+## Lecture 54: Creating a snapshot
+- dbt snapshot
+- dbt create a snapshot table and adds a number of new columns (dbt_scd_id, dbt_updated_at, dbt_valid_from, dbt_valid_to)
+
+## Lecture 53:
+
+## Lecture 53:
+
+## Lecture 53:
+
+## Lecture 53:
+
+## Lecture 53:
+
+## Lecture 53:
