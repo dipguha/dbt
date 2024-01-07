@@ -153,15 +153,29 @@
 - Change the dbt_project.yml and make src level as ephemeral
 - target folder has the raw sql which can be used for debugging purpose
 
-## Lecture 28:
+## Lecture 47: Seeds and cources
+- Differnce between sources and seeds
+- Understand source freshness
+- Integrate source into our project
 
-## Lecture 28:
+## Lecture 48: Seeds and sources overview
+- Seeds are local files that you upload to the DWH from dbt
+- Sources is an abstract layer on the top of input tables
+- Source freshness can be checked automatically
 
-## Lecture 28:
+## Lecture 49: Seeds
+- Update the seeds folder with the full moon data file
+- dbt seed
+- Create mart folder
 
-## Lecture 28:
+## Lecture 50:
+- sources.yml are defined within models forlder
+- change src_listing.sql with src abstraction {{ 'airbnb', listings}}
+- dbt compile
 
-## Lecture 28:
+## Lecture 51: Source freshness
+- Change the sources.yml file and add freshness condition
+- dbt source freshness
 
 ## Lecture 28:
 
