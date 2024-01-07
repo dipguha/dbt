@@ -194,13 +194,32 @@
 - dbt snapshot
 - dbt create a snapshot table and adds a number of new columns (dbt_scd_id, dbt_updated_at, dbt_valid_from, dbt_valid_to)
 
-## Lecture 53:
+## Lecture 55: Tests
+- How tests can be defined
+- Configure built-in genetic tests
+- Create own singular tests
 
-## Lecture 53:
+## Lecture 56: Tests overview
+- Two types of tests
+  - Singular: SQL queries stored in tests which are expected to return an empty resultset
+  - Generic: unique, not_null, accepted_value, Relationship
+    - Custom generic tests can be defined
 
-## Lecture 53:
 
-## Lecture 53:
+## Lecture 57: Generic tests
+- schema.yml file under models
+- tests, documentation, extra 
+- target folder has the SQL statements
+```sql
+  dbt test
+```
+
+## Lecture 58: Singular tests
+- New sql file under tests folder
+```sql
+  dbt test --help
+  dbt test --select dim_listings_cleansed
+```
 
 ## Lecture 53:
 
