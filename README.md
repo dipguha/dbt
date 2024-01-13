@@ -281,8 +281,37 @@
 - dbt run --help
 - dbt run --select src_hosts+
 
+## Lecture 71: Analyses, hooks and exposures
+- How to store ad-hoc analytical queries in dbt
+- work with dbt hooks to manage table permissions
+- Build a dahboard in Preset
+- DBT exposure to document the dashboard
 
-## Lecture 61: 
+## Lecture 72: Analyses
+- Run sql command without creating model
+- dbt compile
 
+## Lecture 73: Hooks
+- Hooks are SQLs that are executed at predefined times
+- Hooks can be configured on the project, subfolder or model level
+- Hook types
+  - on_run_start
+  - on_run_end
+  - pre-hook
+  - post-hook
+- hooks setting on dbt_project.yml file
 
-## Lecture 61: 
+## Lecture 74: Setting up BI dashboard in Snowflake and Preset
+- preset.io
+- Sign up using email
+- Login -> Data - Databases - Create new
+- Database name, User name, Password, Account, Warehouse, role
+- Create dataset - database, schema, see table schema
+- Chart - select dataset - bar chart
+- Save
+- Create dashboard - add the chart - Save
+
+## Lecture 76: Exposure
+- Create dashboards.yml in model folder
+- dbt docs generate
+- Can view as lineage graph in dbt
