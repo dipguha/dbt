@@ -247,16 +247,29 @@
   - dbt run --full-refresh --select fct_reviews (incremental model fails with dbt run when we have schema change)
 
 
-## Lecture 61: 
+## Lecture 65: Documentation objectives
+- How to document models
+- Documentation generator and server
+- Add assets and markdown to the documentation
+- Dev vs production documentation serving
 
+## Lecture 66: Documentation overview
+- Documentation can be defined in two ways
+  - In yaml files
+  - In standalone mark down files
+- DBT ships with a lightweight documentation server
+- overview.md is used for customizing the landing page
 
-## Lecture 61: 
+## Lecture 67: Writing basic documentation
+- description tag in schema.yml is used for documentation
+'''bash
+  dbt docs generate
+  dbt docs serve
+'''
+- goes to all .yml files, looks for description tag and generate documentation
+- target/catalog.json, index.html
 
-
-## Lecture 61: 
-
-
-## Lecture 61: 
+## Lecture 68: 
 
 
 ## Lecture 61: 
