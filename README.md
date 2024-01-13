@@ -221,6 +221,48 @@
   dbt test --select dim_listings_cleansed
 ```
 
-## Lecture 53:
+## Lecture 59: Macros, custom tests and packages
+- How macros are created
+- Use macros to implement generic tests
+- Find and install third party dbt packages
 
-## Lecture 53:
+## Lecture 60: Macros overview
+- Macros are ninja templates created in the macros folder
+- There are many built-in macros in dbt
+- Macros can be used in model definition and tests
+- A special macro, tests, can be used for used for implementing generic tests
+
+## Lecture 61: Writing custom generic tests
+- dbt test --select dim_listing_cleansed
+
+## Lecture 64: Installing 3rd party packages
+- https://hub.getdbt.com/
+- Install dbt_utils by including below code in packages.yml file ()
+  ```sql
+    dbt deps
+  ```
+- use surrogate_key package to generate primary key
+  - fct_reviews.sql
+  - dbt_utils.surrogate_key([listing_id, review_date, reviewer_name, review_text])
+  - dbt run --full-refresh --select fct_reviews (incremental model fails with dbt run when we have schema change)
+
+
+## Lecture 61: 
+
+
+## Lecture 61: 
+
+
+## Lecture 61: 
+
+
+## Lecture 61: 
+
+
+## Lecture 61: 
+
+
+## Lecture 61: 
+
+
+## Lecture 61: 
