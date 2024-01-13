@@ -1,5 +1,44 @@
 # The Complete dbt (Data Build Tool) Bootcamp: Zero to Hero
 
+## Github repo
+- https://github.com/nordquant/complete-dbt-bootcamp-zero-to-hero
+- Practice exam: https://www.qanalabs.com/courses/dbt-developer
+
+## Lecture 4: Maslow's pyramid of data
+- Data collection: Capture relevant data
+- Data Wrangling: Clean and transform, mapping
+- Data integration: Load into DWH
+- BI and Analytics
+- Artificial Intelligence
+
+## Lecture 5: The Data maturity model
+- Data collection: Variety, velocity and volume
+- Data duplication, cleansing, missing zip code, 
+  - Tranform from operational format to DWH format
+- Data Integration
+  - Staging area to Analytics area
+    -  Full or incremental
+
+## Lecture 6: ETL vs ELT
+- Storage and computing was expensive so the transform happened outside DWH
+- Extract and load are done by Fivetran and Stitch, Transform is done by DBT
+
+## Lecture 7: Datawarehouse
+- Database optimized for read operations, analytics workload using SQL
+- Helps with dimensions, facts and denormalization
+- On premise: Oracle, IBM, Teradata
+- Cloud: Snowflake, Redshift, Bigquery
+
+## Lecture 8: External tables and Cloud DWH
+- Amazon S3
+
+## Lecture 9: Data Lakes
+- On prem: HDFS
+- Cloud: S3, Azure Datalakes
+
+## Lecture 10: Data Lakehouse
+- 
+
 ## Lecture 11: The modern data stack
 - Extract - Transform (outside database as db cost was quite high) - load
 - Evolutionof modern data stack
@@ -10,6 +49,17 @@
     - Scale out/horizontal scaling
   - Compute and storage separation
   - Row oriented to column oriented databases
+
+## Lecture 12: The Basics of SCD
+- Data that changes infrequently and unpredictably
+- SCD Type 0
+  - Not updating the DWH table when a dimension change (e.g. fax data)
+- SCD Type 1
+  - Updating the DWH table when a dimension changes, overwriting the original value (e.g. air condition)
+- SCD Type 2
+  - Keeping full history, adding additional (historic data) rows for each dimension change (e.g. price)
+- SCD Type 3
+  - Keeping limited data history - adding separate columns for original and current value (e.g. previous state and current state of flat type)
 
 ## Lecture 17: dbt Overview
 - Transform - T
@@ -315,3 +365,55 @@
 - Create dashboards.yml in model folder
 - dbt docs generate
 - Can view as lineage graph in dbt
+
+## Lecture 80: Great Expectations overview
+- dbt-expectations
+  - Install in packages.yml
+  - dbt deps
+- marts, facts and dimensions are important tables
+
+## Lecture 81: Comparing row countes between models
+- schema.yml
+- dim_listings_w_hosts
+
+## Lecture 82: Looking for outliers
+- 
+
+## Lecture 83: Test warnings
+- Price more than 5000
+- We can warn instead of error
+
+## Lecture 84: Validating column types
+
+## Lecture 85: Monitor categorical variabls in the source data
+- sources.yml
+```sql
+  dbt test --select source:airbnb.listings
+```
+
+## Lecture 85: Debugging test
+```sql
+  dbt --debug test --select source:airbnb.listings
+```
+- Get the sql from target folder
+
+## Lecture 93: DBT best practices
+- Data engineering and data governance team
+- Data Platform that collects and Integrates data with 20 source systems
+- Referred as Business development data platform
+  - Data is used to build product and services
+  - It's not a reporting platform
+  - Train machine learning models
+- Data steward
+  - Bridge function between business and engineering
+  - Access data, understands and trusts data sets we build
+  - Artefacts: data glossary, data catalogue, process to measure and improve data quality
+- Important part
+  - Modular feature to build models
+  - Business logic is broken down into small chunks so easy to write tests
+  - Dependency between models is taken care of
+  - Lineage and documentation are first-class citizen
+  - Put into a container and use CI/CD pipeline
+  - Advice
+    - Position as an Experiment
+    
