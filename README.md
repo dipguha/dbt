@@ -262,17 +262,24 @@
 
 ## Lecture 67: Writing basic documentation
 - description tag in schema.yml is used for documentation
-'''bash
+```bash
   dbt docs generate
   dbt docs serve
-'''
+```
 - goes to all .yml files, looks for description tag and generate documentation
 - target/catalog.json, index.html
 
-## Lecture 68: 
+## Lecture 68: Markdown based docs
+- create docs.md in models folder
+- link with description tag in schema.yml file
+- Overview page
+  - overview.md in models folder
+- new folder assets
+  - dbt_project.yml: asset-paths: ["assets]
 
-
-## Lecture 61: 
+## Lecture 69: The lineage graph, DAG
+- dbt run --help
+- dbt run --select src_hosts+
 
 
 ## Lecture 61: 
